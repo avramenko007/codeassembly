@@ -75,6 +75,11 @@
 body{
   margin: 0;
   padding: 0;
+  font-family: 'nunito_sans_regular', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.1;
+  color: #000;
+  background-color: #fff;
 }
 
 .container {
@@ -82,6 +87,7 @@ body{
     margin: 0 auto;
     overflow: hidden;
     padding: 0 15px;
+    z-index:1001;
 }
 
 h1{
@@ -158,7 +164,11 @@ p{
   }
 }
 
-.section-description{
+.section-description {
+  margin:0 0 45px 0;
+}
+
+.section-description p{
   display: block;
   max-width: 530px;
   margin: 0 auto;
@@ -173,7 +183,7 @@ p{
   position: absolute;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 100001;
   background-color: #0e211f;
 }
 
@@ -533,9 +543,20 @@ p{
   color: #fff;
   min-height: 695px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   padding: 35px 0 120px;
   background-image:url(../img/banner-bg.jpg);
+}
+
+.banner-image{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 @media screen and (max-width:1024px) {
@@ -549,7 +570,7 @@ p{
   margin-bottom:20px;
 }
 
-.banner-box .description{
+.banner-box .description p{
   display: block;
   margin-bottom: 90px;
   font-family: 'nunito_sans_regular';
@@ -565,7 +586,6 @@ p{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 45px 0 0;
 }
 
 .doing-item{
@@ -587,7 +607,6 @@ p{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 45px 0 0;
 }
 
 @media screen and (max-width:767px){
@@ -635,6 +654,12 @@ p{
   padding: 150px 0 130px;
 }
 
+@media screen and (max-width:425px){
+  .section-about{
+    padding: 85px 0 85px;
+  }
+}
+
 .about-box{
   display: flex;
   justify-content: center;
@@ -652,7 +677,7 @@ p{
     width: 100%;
 }
 
-.about-item span{
+.about-item .about-item-bold-text{
   font-family: 'nunito_sans_extrabold';
   font-size: 22px;
   line-height: 1.455;
@@ -686,6 +711,12 @@ p{
 .section-contact{
   background-color: #fafafa;
   padding:100px 0 110px;
+}
+
+@media screen and (max-width:425px){
+  .section-contact{
+    padding: 75px 0 90px;
+  }
 }
 
 .contact-box{
@@ -769,6 +800,7 @@ footer{
 
 @media screen and (max-width:767px){
   .footer-list-item {
+    padding: 5px 0;
     width:100%;
     text-align: center;
   }
